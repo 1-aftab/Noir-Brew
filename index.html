@@ -1,81 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noir & Brew | Artisanal Coffee & Bakery</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noir &amp; Brew | Coffee, kitchen and late evenings</title>
+<meta name="description" content="Noir &amp; Brew is a dark, quiet café serving slow-roasted coffee, simple plates and house-made pastry.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">NOIR & BREW</div>
-        <nav>
-            <a href="#menu">Menu</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header class="nav" id="nav">
+  <a href="#top" class="logo">Noir <span>&amp;</span> Brew</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+  <nav id="links">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#specialties">Specialties</a>
+    <a href="#hours">Hours</a>
+    <a href="#location">Visit</a>
+    <a href="#contact" class="pill">Contact</a>
+  </nav>
+</header>
 
-    <section class="hero">
-        <h1>Crafted Coffee & Fine Pastries</h1>
-        <p>Experience artisanal brewing and daily baked delights in a minimalist space designed for focus and relaxation.</p>
-    </section>
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-img" src="assets/images/hero.jpg" alt="Steaming espresso on a dark wooden bar at Noir &amp; Brew">
+  <div class="hero-shade"></div>
+  <div class="steam" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="hero-copy">
+    <p class="hero-small">Slow coffee and small plates since 2014</p>
+    <h1>Noir <em>&amp;</em> Brew</h1>
+    <p class="hero-lead">A low-lit corner café where the espresso is dark, the pastry is warm and nobody rushes you.</p>
+    <div class="actions">
+      <a href="#menu" class="btn solid">See the menu</a>
+      <a href="#location" class="btn ghost">Find us</a>
+    </div>
+  </div>
+</section>
 
-    <main class="container" id="menu">
-        <h2 class="section-title">Featured Menu</h2>
-        <div class="grid">
-            
-            <div class="card">
-                <img src="assets/images/espresso.jpg" alt="Double Espresso">
-                <div class="card-content">
-                    <div class="card-title">
-                        <span>Double Espresso</span>
-                        <span class="price">$3.50</span>
-                    </div>
-                    <p class="card-desc">Rich, full-bodied double shot made from single-origin dark roast beans.</p>
-                </div>
-            </div>
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="wrap split">
+    <div class="reveal">
+      <h2>A room made for lingering</h2>
+      <p>Noir &amp; Brew opened with one grinder, six tables and a belief that good coffee deserves a quiet room. Ten years on, the grinder has company, but the pace has stayed the same.</p>
+      <p>We roast in small batches with a local roaster, bake every morning and cook a short menu that changes with the season. Come for a flat white, stay for supper.</p>
+      <ul class="facts">
+        <li><strong>Small-batch</strong> beans, roasted weekly</li>
+        <li><strong>Baked daily</strong> in our own kitchen</li>
+        <li><strong>Open late</strong> on Friday and Saturday</li>
+      </ul>
+    </div>
+    <figure class="frame reveal">
+      <img src="assets/images/interior-2.jpg" alt="Candlelit tables and leather seating inside Noir &amp; Brew" loading="lazy">
+    </figure>
+  </div>
+</section>
 
-            <div class="card">
-                <img src="assets/images/cappuccino.jpg" alt="Oat Milk Cappuccino">
-                <div class="card-content">
-                    <div class="card-title">
-                        <span>Oat Milk Cappuccino</span>
-                        <span class="price">$4.75</span>
-                    </div>
-                    <p class="card-desc">Smooth espresso topped with velvety steamed oat milk and cocoa dusting.</p>
-                </div>
-            </div>
+<!-- MENU -->
+<section class="section menu" id="menu">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>From the bar and the kitchen</h2>
+      <p>A taste of what we serve. Menu and prices change with the season.</p>
+    </div>
+    <div class="tabs reveal" role="tablist" aria-label="Menu categories">
+      <button class="tab on" data-cat="all" role="tab" aria-selected="true">All</button>
+      <button class="tab" data-cat="coffee" role="tab" aria-selected="false">Coffee</button>
+      <button class="tab" data-cat="kitchen" role="tab" aria-selected="false">Kitchen</button>
+      <button class="tab" data-cat="sweet" role="tab" aria-selected="false">Sweet</button>
+    </div>
+    <ul class="items">
+      <li data-cat="coffee"><div class="row"><h3>Amber Cortado</h3><span class="dots"></span><b>4.50</b></div><p>Double espresso softened with warm milk and a touch of caramelised honey.</p></li>
+      <li data-cat="coffee"><div class="row"><h3>Cardamom Oat Latte</h3><span class="dots"></span><b>5.50</b></div><p>Crushed cardamom, oat milk and our house espresso blend.</p></li>
+      <li data-cat="coffee"><div class="row"><h3>Smoked Maple Cold Brew</h3><span class="dots"></span><b>5.00</b></div><p>Twelve-hour cold brew over ice with maple and a hint of oak smoke.</p></li>
+      <li data-cat="kitchen"><div class="row"><h3>Truffle Mushroom Toast</h3><span class="dots"></span><b>11.50</b></div><p>Sourdough, roasted mushrooms, whipped ricotta and shaved truffle.</p></li>
+      <li data-cat="kitchen"><div class="row"><h3>Slow-Braised Beef Bowl</h3><span class="dots"></span><b>15.00</b></div><p>Red wine beef, creamy polenta, charred greens and pickled shallot.</p></li>
+      <li data-cat="kitchen"><div class="row"><h3>Burrata &amp; Roast Tomato</h3><span class="dots"></span><b>12.00</b></div><p>Creamy burrata, blistered tomatoes, basil oil and toasted seeds.</p></li>
+      <li data-cat="sweet"><div class="row"><h3>Dark Chocolate Tart</h3><span class="dots"></span><b>7.50</b></div><p>Bitter chocolate ganache in a salted butter crust, with cream.</p></li>
+      <li data-cat="sweet"><div class="row"><h3>Brown Butter Croissant</h3><span class="dots"></span><b>4.00</b></div><p>Laminated by hand each morning and finished with brown butter glaze.</p></li>
+    </ul>
+  </div>
+</section>
 
-            <div class="card">
-                <img src="assets/images/croissant.jpg" alt="Artisanal Croissant">
-                <div class="card-content">
-                    <div class="card-title">
-                        <span>Artisanal Croissant</span>
-                        <span class="price">$4.00</span>
-                    </div>
-                    <p class="card-desc">Flaky, multi-layered French butter croissant baked fresh every morning.</p>
-                </div>
-            </div>
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>Inside the café</h2>
+      <p>Warm light, dark wood and plates worth slowing down for.</p>
+    </div>
+    <div class="grid">
+      <figure class="g big reveal"><img src="assets/images/interior-1.jpg" alt="The bar and brewing station at Noir &amp; Brew" loading="lazy"></figure>
+      <figure class="g reveal"><img src="assets/images/dish-1.jpg" alt="Truffle mushroom toast" loading="lazy"></figure>
+      <figure class="g reveal"><img src="assets/images/dish-2.jpg" alt="Slow-braised beef bowl" loading="lazy"></figure>
+      <figure class="g reveal"><img src="assets/images/dish-3.jpg" alt="Dark chocolate tart" loading="lazy"></figure>
+      <figure class="g reveal"><img src="assets/images/dish-4.jpg" alt="Amber cortado in a ceramic cup" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
 
-        </div>
-    </main>
+<!-- SPECIALTIES -->
+<section class="section spec" id="specialties">
+  <div class="wrap">
+    <div class="head reveal">
+      <h2>What we're known for</h2>
+    </div>
+    <div class="spec-list">
+      <article class="reveal"><h3>The house roast</h3><p>A chocolate-and-orange blend roasted in small batches, ground fresh for every cup.</p></article>
+      <article class="reveal"><h3>Sunday slow supper</h3><p>One long table, three courses and a menu we only decide on Saturday night.</p></article>
+      <article class="reveal"><h3>Morning bakes</h3><p>Croissants, tarts and loaves come out of the oven before we open the doors.</p></article>
+      <article class="reveal"><h3>Evening pours</h3><p>Coffee cocktails, local wine and amaro, served after six on Fridays and Saturdays.</p></article>
+    </div>
+  </div>
+</section>
 
-    <section class="contact-section" id="contact">
-        <h2 class="section-title" style="margin-bottom: 1rem;">Visit Us</h2>
-        <div class="contact-info">
-            <p><strong>Address:</strong> 123 Sample Street, Suite 100, Cityname, ST 12345</p>
-            <p><strong>Email:</strong> example@gmail.com</p>
-            <p><strong>Phone:</strong> +1 (555) 019-2831</p>
-            <p><strong>Hours:</strong> Mon - Sun: 7:00 AM - 8:00 PM</p>
-        </div>
-    </section>
+<!-- HOURS -->
+<section class="section hours" id="hours">
+  <div class="wrap split">
+    <div class="reveal">
+      <h2>Opening hours</h2>
+      <p>Walk-ins are always welcome. Kitchen closes one hour before we do.</p>
+      <p class="now" id="now"></p>
+    </div>
+    <table class="reveal" id="hoursTable">
+      <tbody>
+        <tr data-d="1"><th>Monday</th><td>8:00 am – 6:00 pm</td></tr>
+        <tr data-d="2"><th>Tuesday</th><td>8:00 am – 6:00 pm</td></tr>
+        <tr data-d="3"><th>Wednesday</th><td>8:00 am – 6:00 pm</td></tr>
+        <tr data-d="4"><th>Thursday</th><td>8:00 am – 8:00 pm</td></tr>
+        <tr data-d="5"><th>Friday</th><td>8:00 am – 11:00 pm</td></tr>
+        <tr data-d="6"><th>Saturday</th><td>9:00 am – 11:00 pm</td></tr>
+        <tr data-d="0"><th>Sunday</th><td>9:00 am – 5:00 pm</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-    <footer>
-        Noir & Brew All Rights Reserved | Template by Aftab
-    </footer>
+<!-- LOCATION -->
+<section class="section" id="location">
+  <div class="wrap split">
+    <div class="reveal">
+      <h2>Find us</h2>
+      <address>
+        <p>48 Ember Lane<br>Old Market District<br>Rivermoor, RM2 4TB</p>
+        <p>Two minutes from Harbour Street tram stop. Street parking is free after 6 pm.</p>
+      </address>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=48+Ember+Lane+Rivermoor" target="_blank" rel="noopener">Open in Maps</a>
+    </div>
+    <div class="mapcard reveal" role="img" aria-label="Stylised map showing Noir &amp; Brew location">
+      <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.2" opacity=".35">
+          <path d="M0 80H400M0 170H400M0 250H400M90 0V300M200 0V300M310 0V300"/>
+          <path d="M0 220C120 180 220 260 400 190" stroke-width="3"/>
+        </g>
+        <circle class="pulse" cx="200" cy="170" r="10"/>
+        <circle cx="200" cy="170" r="6" fill="currentColor"/>
+      </svg>
+      <span>Noir &amp; Brew</span>
+    </div>
+  </div>
+</section>
 
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="wrap center reveal">
+    <h2>Say hello</h2>
+    <p>Questions about events, large groups or private hire? Message us and we'll reply within a day.</p>
+    <div class="actions">
+      <a class="btn solid" href="https://wa.me/15550142388?text=Hello%20Noir%20%26%20Brew" target="_blank" rel="noopener">Message on WhatsApp</a>
+      <a class="btn ghost" href="mailto:hello@noirandbrew.example">hello@noirandbrew.example</a>
+    </div>
+    <p class="small">Phone: +1 555 014 2388 &nbsp;|&nbsp; Instagram: @noirandbrew</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Noir &amp; Brew. All rights reserved. | Website template — final product may differ for each client.</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
-  
